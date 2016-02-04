@@ -57,5 +57,13 @@ void insertion_sort(int *numbers, unsigned count) {
 	memcpy(numbers, new, count*sizeof(int));
 }
 
-sorting_fn sorting_fns[] = {bubble_sort, insertion_sort, NULL};
+__attribute__ ((weak))
+int my_compare (const void * a, const void * b)
+{
+  return ( *(int*)a - *(int*)b );
+}
+void my_q_sort_tortilla_wrap (int *numbers, unsigned count) {
+	qsort(numbers, count, sizeof(int), my_compare);
+ }
 
+sorting_fn sorting_fns[] = {bubble_sort, insertion_sort, my_q_sort_tortilla_wrap};
