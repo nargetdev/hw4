@@ -1,5 +1,5 @@
-#CFLAGS += -O1 -Wall
-CFLAGS += -g3 -Wall
+CFLAGS += -O1 -Wall
+#CFLAGS += -g3 -Wall
 
 check:	check_main check_reverse
 	@printf "\nAll tests passed. Task complete.\n"

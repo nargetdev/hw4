@@ -66,4 +66,4 @@ void my_q_sort_tortilla_wrap (int *numbers, unsigned count) {
 	qsort(numbers, count, sizeof(int), my_compare);
  }
 
-sorting_fn sorting_fns[] = {bubble_sort, insertion_sort, my_q_sort_tortilla_wrap};
+sorting_fn sorting_fns[] = {bubble_sort, insertion_sort, my_q_sort_tortilla_wrap, NULL};
